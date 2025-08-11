@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="сss/index.css" />
+    <title>Coffee Space</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header"></header>
+    <main class="main">
+      <section
+        class="main__coffee-machines"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coffee-machines.partial.html"
+      ></section>
+      <section
+        class="main__questions"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.questions.partial.html"
+      ></section>
+      <section
+        class="main__pricing"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.pricing.partial.html"
+      ></section>
+    </main>
+    <footer
+      class="footer"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+
+    <script src="js/in"></script>
+  </body>
+</html>
