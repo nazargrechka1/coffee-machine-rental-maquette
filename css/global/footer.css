@@ -1,39 +1,50 @@
-.footer__container {
-  max-width: 1200px; 
-  height: 250px;
-  margin: 0 auto; 
-  padding: 0 0px; 
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 40px;
-  box-sizing: border-box; /* щоб padding не збільшував ширину */
+.footer {
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 80px 0 0;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.footer__section, 
-.footer__subscribe {
-  min-width: 0; /* дозволяє елементам стискатись */
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  box-sizing: border-box;
 }
 
 .footer__section {
   flex: 1;
   min-width: 200px;
   margin-bottom: 50px;
-
 }
 
 .footer__section-title {
-    
   color: #f8f6f6;
   margin-bottom: 10px;
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer__description {
+  font-size: 14px;
+  color: #9b9898;
 }
 
 .footer__list {
   list-style: none;
   padding: 0;
   margin: 0;
-   line-height: 30px
+  line-height: 30px;
 }
 
 .footer__list-item {
@@ -45,12 +56,11 @@
   text-decoration: none;
 }
 
-.description {
-  font-size: 14px;
-  color: #9b9898;
+.footer__link:hover {
+  color: #fff;
 }
 
-.subscribe input {
+.footer__input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -60,7 +70,7 @@
   box-sizing: border-box;
 }
 
-.subscribe button {
+.footer__button {
   width: 100%;
   padding: 10px;
   background-color: red;
@@ -70,43 +80,40 @@
   font-weight: bold;
 }
 
-.subscribe button:hover {
+.footer__button:hover {
   background-color: #cc0000;
 }
 
-.footer-bottom {
-  width: 1400px;
-  height: 80px;
+.footer__bottom {
   background-color: #1b1414;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 75px; /* відступи всередині */
+  padding: 0 75px;
   box-sizing: border-box;
 }
 
-.footer-bottom p {
+.footer__copyright {
   font-size: 12px;
   color: #ccc;
   margin: 0;
 }
 
-.social-icons a {
+.footer__social-link {
   color: red;
   margin-left: 10px;
   font-size: 18px;
 }
 
-.social-icons a:hover {
+.footer__social-link:hover {
   color: #ff4d4d;
 }
-
 
 @media (max-width: 768px) {
   .footer__container {
     flex-direction: column;
-    padding: 0 20px; /* менші відступи на мобільних */
+    padding: 0 20px;
   }
 }
 

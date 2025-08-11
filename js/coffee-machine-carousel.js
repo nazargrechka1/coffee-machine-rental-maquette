@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const track = document.querySelector('.coffee-machines__carousel-track');
-    const items = document.querySelectorAll('.coffee-machines__carousel-item');
-    const btnPrev = document.querySelector('.coffee-machines__carousel-nav--prev');
-    const btnNext = document.querySelector('.coffee-machines__carousel-nav--next');
+    const track = document.querySelector('.coffee-catalog__track');
+    const items = document.querySelectorAll('.coffee-catalog__item');
+    const btnPrev = document.querySelector('.coffee-catalog__nav--prev');
+    const btnNext = document.querySelector('.coffee-catalog__nav--next');
 
     let currentIndex = 0;
-    const itemWidth = items[0].offsetWidth + 20; // Element width + gap
+    const itemWidth = items[0].offsetWidth + 20; // ширина елемента + gap
     let isScrollingRight = true;
     let autoScrollInterval;
 
@@ -77,4 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     track.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
     track.addEventListener('mouseleave', startAutoScroll);
-  });
+});
