@@ -50,14 +50,15 @@ p {
 .plan-name {
     font-size: 1.5rem;
     color: #2c3e50;
-    margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .plan-price {
+    display: flex;
     font-size: 2.5rem;
     font-weight: bold;
     color: #c00407;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .price-period {
