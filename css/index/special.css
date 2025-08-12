@@ -1,0 +1,138 @@
+.special {
+  display: flex;
+  background-color: #c80000;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  min-height: 75vh;
+  color: #fff;
+}
+
+.special__content {
+  margin-left: 120px;
+  margin-top: 100px;
+  max-width: 600px;
+  flex: 1;
+}
+
+.special__subtitle {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.special__title {
+  font-size: 56px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.special__title .accent {
+  color: #fff;
+}
+
+.special__text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.special__buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 12px 32px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+
+.btn--primary {
+  background-color: #fff;
+  color: #c80000;
+}
+
+.btn--primary:hover {
+  background-color: #f0f0f0;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn--outline:hover {
+  background-color: #fff;
+  color: #c80000;
+}
+
+.special__image {
+  flex: 1;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special__image img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .special {
+    flex-direction: column;
+    min-height: auto;
+    text-align: center;
+    padding: 0;
+  }
+  .special__content {
+    margin: 40px auto 0 auto;
+    max-width: 100%;
+  }
+  .special__image {
+    margin: 30px auto 0 auto;
+  }
+  .special__image img {
+    max-width: 320px;
+  }
+  .special__title {
+    font-size: 32px;
+  }
+  .special__text {
+    font-size: 16px;
+  }
+  .special__buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .special__content {
+    margin: 24px auto 0 auto;
+    padding: 0 10px;
+  }
+  .special__title {
+    font-size: 22px;
+  }
+  .special__image img {
+    max-width: 180px;
+  }
+}
