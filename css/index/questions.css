@@ -78,10 +78,11 @@
 
 .questions__stat-card {
   width: 300px;
+  flex: 1;
   padding: 30px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-top: 4px solid #d32f2f;
+ 
 }
 
 .questions__stat-card--dark { background-color: #c00407; }
