@@ -4,23 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index/special.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
     <title>Coffee Space</title>
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header class="header"></header>
+    <header
+      class="header"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.header.partial.html"
+    ></header>
     <main class="main">
+      <section
+        class="main__special"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.special.html"
+      ></section>
       <section
         class="main__coffee-machines"
         data-hx-trigger="load"
@@ -64,7 +74,6 @@
       data-hx-swap="outerHTML"
       data-hx-get="global.footer.partial.html"
     ></footer>
-
     <script src="js/index.js"></script>
   </body>
 </html>

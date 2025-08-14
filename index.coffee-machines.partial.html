@@ -1,5 +1,7 @@
-<section class="coffee-machines">
+ <link rel="stylesheet" href="css/coffee-machines.css">
+ <section class="coffee-machines">
   <div class="coffee-catalog">
+    <!-- Заголовок остается без изменений -->
     <div class="coffee-catalog__header">
       <h1 class="coffee-catalog__title">COFFEE MACHINES</h1>
       <h2 class="coffee-catalog__subtitle">
@@ -10,58 +12,52 @@
       </p>
     </div>
 
+    <!-- Исправленная карусель -->
     <div class="coffee-catalog__carousel-wrapper">
+      <button class="coffee-catalog__nav coffee-catalog__nav--prev" aria-label="Previous items">‹</button>
+      
       <div class="coffee-catalog__carousel">
         <div class="coffee-catalog__track">
-          <!-- Кавові машини -->
+          <!-- Основні 4 картки -->
           <div class="coffee-catalog__item">
-            <img
-              src="img/coffee3.jpg"
-              alt="FROST Coffee Machine"
-              class="coffee-catalog__image"
-            />
+            <img src="img/coffee3.jpg" alt="FROST Coffee Machine" class="coffee-catalog__image"/>
             <h3 class="coffee-catalog__name">FROST Coffee Machine</h3>
             <p class="coffee-catalog__price">199,00 USD</p>
             <button class="coffee-catalog__btn-add">Add to Cart</button>
           </div>
 
           <div class="coffee-catalog__item">
-            <img
-              src="img/coffee2.jpg"
-              alt="SMIK 2 Coffee Machine"
-              class="coffee-catalog__image"
-            />
+            <img src="img/coffee2.jpg" alt="SMIK 2 Coffee Machine" class="coffee-catalog__image"/>
             <h3 class="coffee-catalog__name">SMIK 2 Coffee Machine</h3>
             <p class="coffee-catalog__price">299,00 USD</p>
             <button class="coffee-catalog__btn-add">Add to Cart</button>
           </div>
 
           <div class="coffee-catalog__item">
-            <img
-              src="img/coffee1.jpg"
-              alt="ORGANIC Coffee Machine"
-              class="coffee-catalog__image"
-            />
+            <img src="img/coffee1.jpg" alt="ORGANIC Coffee Machine" class="coffee-catalog__image"/>
             <h3 class="coffee-catalog__name">ORGANIC Coffee Machine</h3>
             <p class="coffee-catalog__price">299,00 USD</p>
             <button class="coffee-catalog__btn-add">Add to Cart</button>
           </div>
 
           <div class="coffee-catalog__item">
-            <img
-              src="img/coffe4.jpg"
-              alt="SMIK Coffee Machine"
-              class="coffee-catalog__image"
-            />
+            <img src="img/coffee5.jpg" alt="SMIK Coffee Machine" class="coffee-catalog__image"/>
             <h3 class="coffee-catalog__name">SMIK Coffee Machine</h3>
             <p class="coffee-catalog__price">199,00 USD</p>
             <button class="coffee-catalog__btn-add">Add to Cart</button>
           </div>
-        </div>
-      </div>
 
-      <button class="coffee-catalog__nav coffee-catalog__nav--prev">‹</button>
-      <button class="coffee-catalog__nav coffee-catalog__nav--next">›</button>
+          <!-- 5-та картка -->
+          <div class="coffee-catalog__item">
+            <img src="img/coffee4.jpg" alt="La Spezia Coffee Machine" class="coffee-catalog__image"/>
+            <h3 class="coffee-catalog__name">La Spezia Coffee Machine</h3>
+            <p class="coffee-catalog__price">499,00 USD</p>
+            <button class="coffee-catalog__btn-add">Add to Cart</button>
+          </div>
+        </div> 
+  </div>
+      
+      <button class="coffee-catalog__nav coffee-catalog__nav--next" aria-label="Next items">›</button>
     </div>
   </div>
 </section>
