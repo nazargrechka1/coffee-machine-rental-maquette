@@ -11,6 +11,26 @@
 
 :root {
   scroll-behavior: smooth;
+
+  /* colors */
+
+  --color-primary:#c00407;
+  --color-heading:#222222;
+  --color-subheading:#656565;
+  --color-body: #8c8c8c;
+
+  /* font sizes */
+
+  --font-size-label: 12px;
+  --font-size-heading: 40px;
+  --font-size-subheading: 18px;
+  --font-size-body:16px;
+
+  /* font weights */
+
+  --font-weight-regular:400;
+  --font-weight-semi-bold:600;
+  --font-weight-bold:700;
 }
 
 img {
@@ -22,3 +42,5 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+

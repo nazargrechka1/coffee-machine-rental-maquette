@@ -1,1 +1,3 @@
-import('./coffee-machine-carousel');
+import {coffeeMachineCarousel} from './index/coffee-machine-carousel';
+
+coffeeMachineCarousel()

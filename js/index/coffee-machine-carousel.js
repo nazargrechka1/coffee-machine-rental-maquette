@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+export function initCoffeeCatalog() {
+  
     const track = document.querySelector('.coffee-catalog__track');
     const items = document.querySelectorAll('.coffee-catalog__item');
     const btnPrev = document.querySelector('.coffee-catalog__nav--prev');
     const btnNext = document.querySelector('.coffee-catalog__nav--next');
+
+    if (!track || !items.length || !btnPrev || !btnNext) return;
 
     let currentIndex = 0;
     const itemWidth = items[0].offsetWidth + 20; // ширина елемента + gap
@@ -77,4 +80,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     track.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
     track.addEventListener('mouseleave', startAutoScroll);
-});
+}

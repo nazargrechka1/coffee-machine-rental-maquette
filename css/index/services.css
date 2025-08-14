@@ -1,0 +1,148 @@
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 3.44em 0 3.5em 0;
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services__title-block {
+  margin: 0 auto;
+  text-align: center;
+  width: 770px;
+}
+
+.services__section-label {
+  color: var(--color-primary);
+  font-size: var(--font-size-label);
+  font-family: "Roboto";
+  margin: 1.5em;
+}
+
+.services__section-title {
+  color: var(--color-heading);
+  font-size: var(--font-size-heading);
+  font-family: "Poppins";
+  font-weight: var(--font-weight-bold);
+  margin: 0.4em;
+}
+
+.services__section-text {
+  color: var(--color-subheading);
+  font-size: var(--font-size-subheading);
+  font-family: "Roboto";
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 3em;
+}
+
+.services__tabs-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services__tabs-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.services__tabs-link {
+  font-size: var(--font-size-body);
+  font-family: "Roboto";
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-body);
+  text-decoration: none;
+  padding: 20px 15px 15px 20px;
+}
+
+.services__tabs-underline {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5em 0 3em;
+}
+
+.services__tabs-underline-line {
+  height: 2px;
+  background-color: var(--color-heading);
+}
+
+.services__tabs-underline-line--rental {
+  width: 148px;
+  /* display: none; */
+}
+
+.services__tabs-underline-line--consulting {
+  width: 117px;
+  display: none;
+}
+
+.services__tabs-underline-line--accessories {
+  width: 128px;
+  display: none;
+}
+
+.services__tabs-underline-line--repair {
+  width: 85px;
+  display: none;
+}
+
+.services__tab-content {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff; 
+  border-radius: 12px;
+  width: 1170px;
+  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.services__tab-text {
+  padding: 3.75em;
+}
+
+.services__tab-title {
+  font-size: 22px;
+  font-family: "Poppins";
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.services__tab-description {
+  font-size: var(--font-size-body);
+  font-family: "Roboto";
+  font-weight: var(--font-weight-regular);
+  line-height:1.5;
+}
+
+.services__tab-paragraph{
+  --color-body:#515151;
+  color: var(--color-body);
+}
+
+.services__tab-second-paragraph{
+  margin-top: 2em;
+}
+
+.services__tab-list{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 13em;
+  margin-top: 2em;
+}
+
+.services__tab-item{
+  display: flex;
+  flex-direction: row;
+  color: var(--color-body);
+}
+
+.services__tab-item-description{
+  padding: 1.5em 0 0 0.5em ;
+}
