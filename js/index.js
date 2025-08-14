@@ -1,1 +1,1 @@
-import('./coffee-machine-carousel');
+import('./index/coffee-machine-carousel'); 
