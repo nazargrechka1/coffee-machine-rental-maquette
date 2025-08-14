@@ -1,1 +1,1 @@
-import('./coffee-machine-carousel');
+import('./coffee-machine-carousel.js');  
