@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Дані для каруселі (можна замінити на динамічне завантаження)
   const products = [
