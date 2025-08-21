@@ -1,138 +1,217 @@
+/* ===== Special Section ===== */
 .special {
-  display: flex;
-  background-color: #c80000;
-  font-family: Arial, sans-serif;
-  width: 100%;
-  min-height: 75vh;
+  background-color: #b30000; /* суцільний червоний фон замість градієнта */
   color: #fff;
+  padding: 4em 2em;
+}
+
+.special__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2em;
 }
 
 .special__content {
-  margin-left: 120px;
-  margin-top: 100px;
-  max-width: 600px;
   flex: 1;
 }
 
-.special__subtitle {
-  font-size: 12px;
-  margin-bottom: 10px;
-  color: #fff;
+.special__label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
   letter-spacing: 2px;
   display: block;
+  margin-bottom: 1em;
 }
 
 .special__title {
-  font-size: 56px;
+  font-size: 3rem;
   font-weight: 800;
-  color: #fff;
-  margin-bottom: 30px;
-  line-height: 1.1;
+  margin: 0.3em 0;
+  line-height: 1.2;
 }
 
-.special__title .accent {
-  color: #fff;
+.special__title-highlight {
+  color: #fff; /* виділений текст теж білий, як у макеті */
 }
 
-.special__text {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #fff;
-  margin-bottom: 30px;
+.special__description {
+  font-size: 1rem;
+  margin: 1.2em 0;
+  max-width: 500px;
 }
 
 .special__buttons {
+  margin-top: 1.5em;
   display: flex;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 .btn {
+  padding: 0.9em 1.8em;
   border-radius: 4px;
-  font-size: 18px;
-  padding: 12px 32px;
-  font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  border: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .btn--primary {
-  background-color: #fff;
-  color: #c80000;
+  background: #fff;
+  color: #000;
 }
 
 .btn--primary:hover {
-  background-color: #f0f0f0;
+  background: #f2f2f2;
 }
 
 .btn--outline {
-  background-color: transparent;
-  color: #fff;
   border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
 }
 
 .btn--outline:hover {
-  background-color: #fff;
-  color: #c80000;
+  background: #fff;
+  color: #b30000;
+}
+
+.special__image-wrapper {
+  flex: 1;
+  text-align: right;
 }
 
 .special__image {
-  flex: 1;
-  margin-left: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Brands Carousel ===== */
+.brands-carousel {
+  background: #222;
+  padding: 2em 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.special__image img {
-  max-width: 450px;
-  width: 100%;
-  height: auto;
+.brands-carousel__viewport {
+  width: 80%;
+  overflow: hidden;
+}
+
+.brands-carousel__track {
+  display: flex;
+  gap: 3em;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.brands-carousel__logo {
+  height: 50px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0;
 }
 
-/* Адаптивність */
-@media (max-width: 900px) {
-  .special {
+.brands-carousel__arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.2s;
+}
+
+.brands-carousel__arrow--left {
+  left: 0.5em;
+}
+
+.brands-carousel__arrow--right {
+  right: 0.5em;
+}
+
+.brands-carousel__arrow:hover {
+  color: #ffd700;
+}
+
+/* ===== Адаптивність ===== */
+
+/* Планшети */
+@media (max-width: 992px) {
+  .special__container {
     flex-direction: column;
-    min-height: auto;
     text-align: center;
-    padding: 0;
   }
-  .special__content {
-    margin: 40px auto 0 auto;
-    max-width: 100%;
-  }
-  .special__image {
-    margin: 30px auto 0 auto;
-  }
-  .special__image img {
-    max-width: 320px;
-  }
+
   .special__title {
-    font-size: 32px;
+    font-size: 2.3rem;
   }
-  .special__text {
-    font-size: 16px;
+
+  .special__description {
+    margin: 1em auto;
   }
+
   .special__buttons {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    justify-content: center;
+  }
+
+  .special__image-wrapper {
+    text-align: center;
+  }
+
+  .brands-carousel__viewport {
+    width: 90%;
+  }
+
+  .brands-carousel__track {
+    gap: 2em;
+  }
+
+  .brands-carousel__logo {
+    height: 40px;
   }
 }
 
-@media (max-width: 600px) {
-  .special__content {
-    margin: 24px auto 0 auto;
-    padding: 0 10px;
+/* Мобільні */
+@media (max-width: 576px) {
+  .special {
+    padding: 2.5em 1em;
   }
+
   .special__title {
-    font-size: 22px;
+    font-size: 1.8rem;
   }
-  .special__image img {
-    max-width: 180px;
+
+  .btn {
+    width: 100%;
+  }
+
+  .brands-carousel {
+    padding: 1.5em 0;
+  }
+
+  .brands-carousel__viewport {
+    width: 100%;
+  }
+
+  .brands-carousel__track {
+    gap: 1.5em;
+  }
+
+  .brands-carousel__logo {
+    height: 30px;
+  }
+
+  .brands-carousel__arrow {
+    font-size: 1.5em;
   }
 }
