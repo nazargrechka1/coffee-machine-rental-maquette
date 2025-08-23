@@ -1,103 +1,109 @@
 /* ===== Special Section ===== */
 .special {
-  background-color: #b30000; /* суцільний червоний фон замість градієнта */
+  background: #b30000;
   color: #fff;
-  padding: 4em 2em;
+  padding: 6em 3em;
+  font-family: Poppins, sans-serif;
 }
 
 .special__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  gap: 2em;
+  gap: 1em; /* ЗМЕНШЕНО: зменшений відступ між текстом і фото */
 }
 
 .special__content {
-  flex: 1;
+  flex: 1.9;
+  padding-left: 3em;
 }
 
-.special__label {
-  font-size: 0.85rem;
+.special__label { /* ВИПРАВЛЕНО: Змінено на special__label для відповідності HTML */
+  font-size: 0.8rem; /* ЗМЕНШЕНО: менший розмір шрифту для "SPECIAL" */
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  margin-bottom: 5em; /* ЗБІЛЬШЕНО: більша відстань між "SPECIAL" та "Introducing SMIK" */
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  display: block;
-  margin-bottom: 1em;
+  display: block; /* Додано, щоб margin-bottom працював коректно */
 }
 
 .special__title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0.3em 0;
+  font-size: 4rem; /* ЗБІЛЬШЕНО: більший розмір основного тексту */
+  font-weight: 700;
   line-height: 1.2;
-}
-
-.special__title-highlight {
-  color: #fff; /* виділений текст теж білий, як у макеті */
+  margin: 0 0 0.6em 0;
 }
 
 .special__description {
   font-size: 1rem;
-  margin: 1.2em 0;
-  max-width: 500px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-bottom: 2em;
 }
 
 .special__buttons {
-  margin-top: 1.5em;
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
 }
 
+/* ===== Buttons ===== */
 .btn {
-  padding: 0.9em 1.8em;
+  padding: 0.7em 1.4em;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 600;
-  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
+/* Primary */
 .btn--primary {
   background: #fff;
   color: #000;
+  border: none;
 }
-
 .btn--primary:hover {
-  background: #f2f2f2;
+  background: #f0f0f0;
 }
 
+/* Outline */
 .btn--outline {
   border: 2px solid #fff;
   color: #fff;
   background: transparent;
 }
-
 .btn--outline:hover {
   background: #fff;
-  color: #b30000;
+  color: #000;
 }
 
+/* ===== Фото кавомашини ===== */
 .special__image-wrapper {
-  flex: 1;
-  text-align: right;
+  flex: 1.5;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0; /* ЗМЕНШЕНО: прибрано відступ для наближення до тексту */
 }
 
 .special__image {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 
 /* ===== Brands Carousel ===== */
 .brands-carousel {
   background: #222;
-  padding: 2em 0;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5em;
+  position: relative;
+  margin-top: 0;
 }
 
 .brands-carousel__viewport {
@@ -113,7 +119,7 @@
 }
 
 .brands-carousel__logo {
-  height: 50px;
+  height: 70px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
@@ -129,31 +135,36 @@
   top: 50%;
   transform: translateY(-50%);
   transition: color 0.2s;
+  z-index: 2;
 }
-
 .brands-carousel__arrow--left {
-  left: 0.5em;
+  left: 4em;
 }
-
 .brands-carousel__arrow--right {
-  right: 0.5em;
+  right: 4em;
 }
-
 .brands-carousel__arrow:hover {
   color: #ffd700;
 }
 
 /* ===== Адаптивність ===== */
-
-/* Планшети */
 @media (max-width: 992px) {
   .special__container {
     flex-direction: column;
     text-align: center;
+    gap: 2em;
+  }
+
+  .special__content {
+    padding-left: 0;
+  }
+
+  .special__label { /* ВИПРАВЛЕНО */
+    margin-bottom: 2em;
   }
 
   .special__title {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 
   .special__description {
@@ -165,7 +176,13 @@
   }
 
   .special__image-wrapper {
-    text-align: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left: 0;
+  }
+
+  .special__image {
+    max-width: 320px;
   }
 
   .brands-carousel__viewport {
@@ -177,22 +194,30 @@
   }
 
   .brands-carousel__logo {
-    height: 40px;
+    height: 50px;
   }
 }
 
-/* Мобільні */
 @media (max-width: 576px) {
   .special {
     padding: 2.5em 1em;
   }
 
+  .special__label { /* ВИПРАВЛЕНО */
+    margin-bottom: 1.8em;
+  }
+
   .special__title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .btn {
     width: 100%;
+    font-size: 1em;
+  }
+
+  .special__image {
+    max-width: 220px;
   }
 
   .brands-carousel {
@@ -208,7 +233,7 @@
   }
 
   .brands-carousel__logo {
-    height: 30px;
+    height: 40px;
   }
 
   .brands-carousel__arrow {
