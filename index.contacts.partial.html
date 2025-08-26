@@ -1,0 +1,72 @@
+<section class="contact">
+  <div class="container">
+    <div class="contact__left">
+
+      <div class="contact-information">
+        <h2 class="contact-information__title">CONTACTS</h2>
+        <p class="contact-information__subtitle">We're always in Touch</p>
+        <p class="contact-information__description">Feel free to contact us if you need a consultation:</p>
+
+        <div class="contact-information__information">
+          <article class="contact-information__article">
+            <h3 class="contact-information__item-title">Address</h3>
+            <p class="contact-information__item-description">303 E 61st St, New York,<br>
+              NY 10065</p>
+          </article>
+
+          <article class="contact-information__article">
+            <h3 class="contact-information__item-title">Hours</h3>
+            <p class="contact-information__item-description">Monday - Saturday: 11 AM - 9 PM<br>
+              Sunday: 11 AM - 7 PM</p>
+          </article>
+
+          <article class="contact-information__article">
+            <h3 class="contact-information__item-title">Contacts</h3>
+            <p class="contact-information__item-description">
+              <a class="contact-information__phone" href="tel:+12345678900">+1 (234) 567 89 00</a><br>
+              <a class="contact-information__email" href="mailto:coffeespace@email.com">coffeespace@email.com</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.052220196627!2d-73.97321964412151!3d40.761737594982826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e62ee94721%3A0x6f03fa0dd4c0327a!2zMzAzIEUgNjFzdCBTdCwgTmV3IFlvcmssIE5ZIDEwMDY1LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2spl!4v1756068017613!5m2!1suk!2spl"
+          width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="contact-map__map"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form id="contact-formID" class="contact-form__form" action="https://formspree.io/f/mdkddkbz" method="POST">
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="text" id="first-name" name="first-name"
+            placeholder="Enter your full name*" required />
+        </div>
+
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="text" id="last-name" name="last-name"
+            placeholder="Enter your phone number*" required />
+        </div>
+
+
+        <div class="contact-form__field">
+          <input class="contact-form__input" type="email" id="email" name="email" placeholder="Enter your e-mail*"
+            required />
+        </div>
+
+        <div class="contact-form__field">
+          <textarea class="contact-form__textarea" id="message" name="message" placeholder="Type your message"
+            required></textarea>
+        </div>
+
+        <button id="submit-btn" class="contact-form__button" type="submit" disabled>
+          Request a Quote
+        </button>
+
+        <p id="my-form-status"></p>
+      </form>
+    </div>
+  </div>
+</section>
