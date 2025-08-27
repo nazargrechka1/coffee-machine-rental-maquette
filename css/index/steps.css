@@ -1,0 +1,112 @@
+.steps {
+    background-color: white;
+    padding: 90px 0;
+
+    .container {
+        .steps__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .steps__title {
+                font-size: 10px;
+                margin-bottom: 10px;
+                color: #c00407;
+                text-transform: uppercase;
+            }
+
+            .steps__subtitle {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #0a0a0a;
+            }
+
+            .steps__description {
+                color: #7f8c8d;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .steps__article-container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            row-gap: 20px;
+            text-align: center;
+            max-width: 900px;
+
+            .steps__article {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+
+                .steps__item-image {
+                    max-width: 300px;
+                    border-radius: 10px;
+                }
+
+                .steps__item-title {
+                    font-size: 20px;
+
+                    .steps__insert {
+                        color: #a80000;
+                    }
+                }
+
+                .steps__item-description {
+                    color: #7f8c8d;
+                    font-size: 18px;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 700px) {
+    .steps {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .steps__article-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 30px;
+
+                .steps__article {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1300px) {
+    .steps {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .steps__article-container {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 30px;
+
+                .steps__article {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
