@@ -78,7 +78,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
@@ -203,6 +202,10 @@
             .contact-form {
                 height: 100%;
                 width: 500px;
+
+                .contact-form__form{
+                    gap: 50px;
+                }
             }
         }
     }
