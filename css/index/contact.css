@@ -1,6 +1,7 @@
 .contact {
     background-color: #f2f2f2;
     padding: 90px 0;
+    font-family: Poppins, sans-serif;
 
     .container {
         display: flex;
@@ -200,7 +201,7 @@
             }
 
             .contact-form {
-                height: 100%;
+                height: 708px;
                 width: 500px;
 
                 .contact-form__form{
