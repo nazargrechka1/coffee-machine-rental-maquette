@@ -30,6 +30,7 @@
                 color: #7f8c8d;
                 font-size: 18px;
                 margin-bottom: 20px;
+                width: 300px;
             }
         }
 
@@ -83,6 +84,10 @@
                 .steps__subtitle {
                     width: 100%;
                 }
+
+                .steps__description {
+                    width: 100%;
+                }
             }
 
             .steps__article-container {
@@ -108,6 +113,10 @@
 
             .steps__text-container {
                 .steps__subtitle {
+                    width: 100%;
+                }
+
+                .steps__description {
                     width: 100%;
                 }
             }
